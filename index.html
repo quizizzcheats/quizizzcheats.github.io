@@ -127,7 +127,7 @@
     <script>
         function changeUrl(path) {
             window.history.pushState({}, '', window.location.origin + '/' + path);
-            window.location.href = window.location.href;  // เปลี่ยนแปลงที่นี่
+            window.location.reload();
         }
     </script>
 
