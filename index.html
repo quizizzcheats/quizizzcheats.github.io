@@ -113,16 +113,24 @@
     <!-- ปุ่ม Kahoot และ Quizizz -->
     <div class="content-social">
         <div class="text-center">
-            <a href="https://quizizzcheats.github.io/kahoot/" class="btn btn-primary btn-lg" target="_blank">
+            <a href="/" class="btn btn-primary btn-lg" onclick="changeUrl('kahoot')">
                 <img src="https://cdn.discordapp.com/attachments/1274715030390308876/1332541734965743677/logokahoot.png?ex=6795a1b3&is=67945033&hm=cba7abef663ead45d6aaa2979877453d2d0ff4fcb0858427c55480e9dca28403&" alt="Kahoot" style="width: 20px; height: 20px; margin-right: 5px;">
                 Kahoot
             </a>
-            <a href="https://quizizzcheats.github.io/quizizz/" class="btn btn-secondary btn-lg" target="_blank">
+            <a href="/" class="btn btn-secondary btn-lg" onclick="changeUrl('quizizz')">
                 <img src="https://cdn.discordapp.com/attachments/1274715030390308876/1332542769750872195/logoquizizz.png?ex=6795a2a9&is=67945129&hm=a6ec3f80f936910e327d5ccfa79a98f6c6c1c9f34c8d9f3548d6eceeb1da1901&" alt="Quizizz" style="width: 20px; height: 20px; margin-right: 5px;">
                 Quizizz
             </a>
         </div>
     </div>
+
+    <script>
+        function changeUrl(path) {
+            window.history.pushState({}, '', window.location.origin + '/' + path);
+            location.reload();
+        }
+    </script>
+
 
     <!-- Footer -->
     <footer>
